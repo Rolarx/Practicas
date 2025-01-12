@@ -1,0 +1,147 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"          Apuntes administración de sistemas Linux 1     \n";
+    cout<<"Estos son mis apuntes de administración de sistemas de Linux, presentado de forma interactiva  \n";
+    cout<<"Estos apuntes tratarán sobre los comandos de texto shell, administración de archivos, y demás que vea en el curso \n";
+    int valor;
+    cout<<"1. Comandos \n";
+    cout<<"2. Opciones \n";
+    cout<<"3. Rutas \n";
+    cout<<"4. Usos de Linux \n";
+    cout<<"          Ingrese la opción deseada       \n";
+    cin>>valor;
+    switch(valor)
+    {
+        case 1:
+        {
+            int valor2;
+            cout<<"1. Ls \n";
+            cout<<"2. Cat \n";
+            cout<<"3. whereis \n";
+            cout<<"4. Ln \n";
+            cout<<"5. cp \n";
+            cout<<"6. mv \n";
+            cout<<"7. rm \n";
+            cout<<"8. rmdir \n";
+            cout<<"9. man \n";
+            cout<<"10. touch \n";
+            cout<<"11. pdw \n";
+            cout<<"12. .. , . y ~ \n";
+            cout<<"13. cd \n";
+            cin>>valor2;
+            switch(valor2)
+            {
+                case 1:
+                    cout<<"El comando ls nos sirve para saber qué contiene una carpeta, si se usa sobre un archivo \n";
+                    cout<<"nos dirá cuantos enlaces fuertes y suaves tiene. Para más detalles, utilizar opción -l";
+                    break;
+                case 2:
+                {
+                    cout<<" El comando cat tiene varios usos: mostrar el contenido de uno o más archivos, [cat > nuevo_archivo.txt] crea un archivo nuevo \n";
+                    cout<<" combinar(concatenar) archivos en un nuevo archivo [cat archivo1.txt archivo2.txt > archivo3.txt] \n";
+                    break;
+                }
+                case 3:
+                {
+                    cout<<" El comando whereis nos da la ruta absoluta al archivo que le solicitamos al comando \n";
+                    break;
+                }
+                case 4:
+                {
+                    cout<<"el comando ln se utiliza para hacer un vinculo fuerte entre 2 archivos, si utilizamos la \n";
+                    cout<<"opción -s, se crea un vinculo debil. \n";
+                    break;
+                }
+                case 5:
+                {
+                    cout<<"el comando cp (copy) nos permite copiar un elemento, señalandole el documento (con su ruta) y la dirección de destino \n";
+                    break;
+                }
+                case 6:
+                {
+                    cout<<"el comando mv (move) nos permite mover 1 o más archivos a una dirección especificada \n";
+                    break;
+                }
+                case 7:
+                {
+                    cout<<"el comando rm (remove) nos permite eliminar 1 archivo de una carpeta (no un directorio), en caso de querer eliminar \n";
+                    cout<<"todo el contenido de una carpeta, utlizaremos la opción -r (recursive), si quisieramos borrar / (no hacer) \n";
+                    cout<<"sería rm -r / /n";
+                    break;
+                }
+                case 8:
+                {
+                    cout<<"el comando rmdir sirve para eliminar directorios vacíos \n";
+                    break;
+                }
+                case 9:
+                {
+                    cout<<"el comando man (manual) nos sirve para acceder al manual interno de un comando o una opción \n";
+                    break;
+                }
+                case 10:
+                {
+                    cout<<"el comando touch nos sirve para crear un nuevo archivo \n";
+                    break;
+                }
+                case 11:
+                {
+                    cout<<"el comando pdw entrega la ruta a la carpeta donde estás actualmente";
+                    break;
+                }
+                case 12:
+                {
+                    cout<<" . es una abreviación para la carpeta donde estás actualmente, mientras que .. es una abreviación \n";
+                    cout<<" para la carpeta padre de la carpeta en la que estás. ~ Es una abreviación de home/user \n";
+                    cout<<" ejemplo:  cd ../.. nos envía a la carpeta padre de la carpeta padre de la que estamos \n";
+                    break;
+                }
+                case 13:
+                {
+                    cout<<" el comando cd nos envía a la carpeta que le indicamos \n";
+                    break;
+                }
+            }
+         
+            
+        }
+        case 2:
+        {
+            int valor3;
+            cout<<"1. -l \n";
+            cout<<"2. -i \n";
+            cout<<"3. -r \n";
+            cout<<"4. -f \n";
+            cout<<"5. -i \n";
+            cout<<"6. -s \n";
+            cout<<"7. -1 \n";
+            cin>>valor3;
+            switch(valor3)
+            {
+                case 1:
+                {
+                    cout<<"la opción -l (large) nos permite pedirle información más detallada al comando, usualmente empleado con ls \n";
+                    break;
+                }
+                case 2:
+                {
+                    cout<<" La opción -i (interactive) pide confirmación para ejecutar el comando \n";
+                    break;
+                }
+                case 3: 
+                {
+                    cout<<"La opción -r (recursive) repite el comando \n";
+                    break;
+                }
+                
+            }
+            
+        }
+            
+    }
+    return 0;
+}
