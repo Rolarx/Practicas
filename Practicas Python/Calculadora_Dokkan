@@ -2,18 +2,21 @@
 total_LR=500
 total_categoria=400 #El costo en monedas de cada personaje varía dependiendo de la rareza del mismo
 total_normal=150
-print("¿Cuantas monedas tienes actualmente? \n","El total de mis monedas es: ")
+print("¿Cuantas monedas tienes actualmente?(el valor debe ser mayor o igual a 0)\n","El total de mis monedas es: ")
 monedas=int(input())
-print('''¿Qué tipo de personaje buscas canjear? ingresa opcion deseada:
-1.- LR
-2.- Lider categoría
-3.- Personaje antiguo (150 monedas de coste)
-''')
-opcion=int(input())
-match opcion:
-    case 1:
-        print("la cantidad de piedras que te falta es:", ((total_LR-monedas)*5),"piedras")
-    case 2:
-        print("la cantidad de piedras que te falta es:",((total_categoria-monedas)*5),"piedras")
-    case 3:
-        print("la cantidad de piedras que te falta es:",((total_normal-monedas)*5),"piedras")
+if monedas>=0:  #La cantidad de monedas no puede ser negativa bajo ningun contexto
+    print('''¿Qué tipo de personaje buscas canjear? ingresa opcion deseada:
+    1.- LR
+    2.- Lider categoría
+    3.- Personaje antiguo (150 monedas de coste)
+    ''')
+    opcion=int(input())
+    match opcion:
+        case 1:
+            print("la cantidad de piedras que te falta es:", ((total_LR-monedas)*5),"piedras")
+        case 2:
+            print("la cantidad de piedras que te falta es:",((total_categoria-monedas)*5),"piedras")
+        case 3:
+            print("la cantidad de piedras que te falta es:",((total_normal-monedas)*5),"piedras")
+else:
+    print("la cantidad actual de monedas debe ser mayor o igual a 0")
