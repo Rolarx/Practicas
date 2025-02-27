@@ -13,10 +13,10 @@ if monedas>=0:  #La cantidad de monedas no puede ser negativa bajo ningun contex
     opcion=int(input())
     match opcion:
         case 1:
-            print("la cantidad de piedras que te falta es:", ((total_LR-monedas)*5),"piedras")
+            print("la cantidad de piedras que te falta es:", max(((total_LR-monedas)*5),0),"piedras") #max(calculo,0) en caso que las monedas iniciales sean más que la cantidad necesaria (evitar resultados negativos)
         case 2:
-            print("la cantidad de piedras que te falta es:",((total_categoria-monedas)*5),"piedras")
+            print("la cantidad de piedras que te falta es:",max(((total_categoria-monedas)*5),0),"piedras")
         case 3:
-            print("la cantidad de piedras que te falta es:",((total_normal-monedas)*5),"piedras")
+            print("la cantidad de piedras que te falta es:",max(((total_normal-monedas)*5),0),"piedras")
 else:
     print("la cantidad actual de monedas debe ser mayor o igual a 0")
