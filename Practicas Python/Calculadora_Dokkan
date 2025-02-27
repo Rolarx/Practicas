@@ -1,0 +1,19 @@
+#Calculador piedras para monedas en juego para moviles Dokkan Battle
+total_LR=500
+total_categoria=400 #El costo en monedas de cada personaje varía dependiendo de la rareza del mismo
+total_normal=150
+print("¿Cuantas monedas tienes actualmente? \n","El total de mis monedas es: ")
+monedas=int(input())
+print('''¿Qué tipo de personaje buscas canjear? ingresa opcion deseada:
+1.- LR
+2.- Lider categoría
+3.- Personaje antiguo (150 monedas de coste)
+''')
+opcion=int(input())
+match opcion:
+    case 1:
+        print("la cantidad de piedras que te falta es:", ((total_LR-monedas)*5),"piedras")
+    case 2:
+        print("la cantidad de piedras que te falta es:",((total_categoria-monedas)*5),"piedras")
+    case 3:
+        print("la cantidad de piedras que te falta es:",((total_normal-monedas)*5),"piedras")
